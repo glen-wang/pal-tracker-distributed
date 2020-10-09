@@ -6,12 +6,9 @@ applications:
   memory: 1G
   instances: 1
   env:
-    #REGISTRATION_SERVER_ENDPOINT: http://registration-pal-gw.apps.evans.pal.pivotal.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
-    SPRING_PROFILES_ACTIVE: cloud
-    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
-    MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: '*'
-    MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS: 'always'
+    GRANT_TYPE: client_credentials
   services:
   - tracker-timesheets-database
   - tracker-service-registry
+  - tracker-sso
